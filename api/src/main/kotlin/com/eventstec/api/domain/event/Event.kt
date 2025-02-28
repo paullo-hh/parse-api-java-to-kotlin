@@ -5,30 +5,32 @@ import lombok.AllArgsConstructor
 import lombok.Getter
 import lombok.NoArgsConstructor
 import lombok.Setter
+import org.hibernate.annotations.DynamicInsert
+import org.hibernate.annotations.DynamicUpdate
 import org.hibernate.annotations.UuidGenerator
 import java.util.*
 
-@Table(name = "event")
 @Entity
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "event")
 class Event {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @UuidGenerator
-    private var id: Long = 0
+    val id: Long = -1
 
-    private var title: String = ""
+    val title: String = ""
 
-    private var descripcion: String = ""
+    val descripcion: String = ""
 
-    private var imgUrl: String = ""
+    val imgUrl: String = ""
 
-    private var eventUrl: String = ""
+    val eventUrl: String = ""
 
-    private var remote: Boolean = false
+    val remote: Boolean = false
 
-    private var date: Date = Date()
+    val date: Date = Date()
 }

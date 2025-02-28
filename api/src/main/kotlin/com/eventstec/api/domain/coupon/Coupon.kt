@@ -17,15 +17,15 @@ import java.util.*
 class Coupon {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private var id: Long = 0
+    val id: Long = -1
 
-    private var valid: Date? = null
+    val valid: Date? = null
 
-    private var discount: Int? = null
+    val discount: Int? = null
 
-    private var code: String? = null
+    val code: String? = null
 
     @ManyToOne
     @JoinColumn(name = "event_id")
-    private var event: Event? = null
+    val event: Event? = null
 }
